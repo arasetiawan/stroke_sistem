@@ -13,19 +13,19 @@ st.title('sistem prediksi stroke')
 col1, col2 = st.columns(2)
 
 with col1 :
-    gender = st.text_input ('Perempuan/Laki-laki 1/0')
+    gender = st.text_input ('Perempuan/Laki-laki 0/1')
 
 with col1 :
     age = st.text_input ('Berapa Umur Anda')
 
 with col1 :
-    hypertension = st.text_input ('apakah anda memiliki riwayat hipertensi Tidak?Ya 0/1')
+    hypertension = st.text_input ('apakah anda memiliki riwayat hipertensi Tidak/Ya 0/1')
 
 with col1 :
-    heart_disease = st.text_input ('apakah anda memiliki riwayat penyakit jantung Tidak/Ya 1/0')
+    heart_disease = st.text_input ('apakah anda memiliki riwayat penyakit jantung Tidak/Ya 0/1')
 
 with col1 :
-    ever_married = st.text_input ('apakah anda pernah menikah Tidak?Ya 1/0')
+    ever_married = st.text_input ('apakah anda pernah menikah Tidak/Ya 0/1')
 
 with col2 :
     work_type = st.text_input ('apa tipe pekerjaan anda? pemerintahan/anak-anak/swasta/wiraswasta 0/1/2/3')

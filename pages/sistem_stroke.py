@@ -7,7 +7,7 @@ with gzip.open('data_compressed.sav', 'rb') as file:
     stroke_model = pickle.load(file)
 
 #judul web
-st.title('sistem prediksi stroke')
+st.title('Sistem Prediksi Stroke')
 
 import streamlit as st
 
@@ -15,17 +15,17 @@ import streamlit as st
 col1, col2 = st.columns(2)
 
 with col1:
-    gender = 0 if st.radio('Jenis Kelamin?', ['Perempuan', 'Laki-laki']) == 'Perempuan' else 1
-    age = st.number_input('Berapa umur Anda?', min_value=0, max_value=120)
+    gender = 0 if st.radio('Jenis kelamin?', ['Perempuan', 'Laki-laki']) == 'Perempuan' else 1
+    age = st.number_input('Berapa umur anda?', min_value=0, max_value=120)
     hypertension = 0 if st.radio('Punya Riwayat Hipertensi?', ['Tidak', 'Ya']) == 'Tidak' else 1
     heart_disease = 0 if st.radio('Punya Riwayat Jantung?', ['Tidak', 'Ya']) == 'Tidak' else 1
-    ever_married = 0 if st.radio('Apakah Anda Pernah Menikah?', ['Tidak', 'Ya']) == 'Tidak' else 1
+    ever_married = 0 if st.radio('Apakah anda pernah menikah?', ['Tidak', 'Ya']) == 'Tidak' else 1
 
 with col2:
     work_type = st.radio('Pilih tipe pekerjaan:', ['Pemerintahan', 'Anak-anak', 'Swasta', 'Wiraswasta'])
-    Residence_type =  0 if st.radio('apa tipe tempat tinggal', ['Pedesaan', 'Perkotaan']) == 'Pedesaan' else 1
-    avg_glucose_level = st.number_input('Berapa kadar glukosa rata-rata Anda?', min_value=0.0, format="%.2f")
-    bmi = st.number_input('Berapa berat badan Anda?', min_value=0.0, format="%.2f")
+    Residence_type =  0 if st.radio('pilih tipe tempat tinggal', ['Pedesaan', 'Perkotaan']) == 'Pedesaan' else 1
+    avg_glucose_level = st.number_input('Berapa kadar glukosa rata-rata anda?', min_value=0.0, format="%.2f")
+    bmi = st.number_input('Berapa berat badan anda?', min_value=0.0, format="%.2f")
     smoking_status = st.radio('Pilih status merokok:', ['Dahulu merokok', 'Tidak diketahui', 'Tidak pernah merokok', 'Merokok'])
 
 # Konversi ke nilai numerik menggunakan ternary operator
@@ -45,16 +45,16 @@ smoking_status = (
 
 # Tampilkan data yang dimasukkan pengguna
 st.write('### Data yang Anda Masukkan:')
-st.write(f"- **Jenis Kelamin:** {gender}")
+st.write(f"- **Jenis kelamin:** {gender}")
 st.write(f"- **Usia:** {age}")
 st.write(f"- **Hipertensi:** {hypertension}")
 st.write(f"- **Penyakit Jantung:** {heart_disease}")
-st.write(f"- **Status Pernikahan:** {ever_married}")
+st.write(f"- **Status pernikahan:** {ever_married}")
 st.write(f"- **Tipe pekerjaan:** {work_type}")
-st.write(f"- **Tempat Tinggal:** {Residence_type}")
+st.write(f"- **Tempat tinggal:** {Residence_type}")
 st.write(f"- **Kadar Glukosa:** {avg_glucose_level}")
 st.write(f"- **BMI:** {bmi}")
-st.write(f"- **Status merokok Anda:** {smoking_status}")
+st.write(f"- **Status merokok:** {smoking_status}")
 
 #code untuk predeksi
 stroke_diagnosis = ''
@@ -75,7 +75,7 @@ if st.button('Test Prediksi Stroke'):
         st.write('- **Berhenti Merokok**: Jika merokok, segera hentikan untuk mengurangi risiko stroke.')
         st.write('- **Pola Makan Sehat**: Konsumsi lebih banyak sayur, buah, dan makanan kaya serat.')
         st.write('- **Hindari Stres Berlebihan**: Kelola stres dengan meditasi, olahraga, atau kegiatan menyenangkan.')
-        st.write('- **berkonsultasi dengan dokter spesialis**: jika di perlukan kamu bisa berkonsultasi dengan dokter spesialis.')
+        st.write('- **berkonsultasi dengan dokter spesialis**: Jika di perlukan kamu bisa berkonsultasi dengan dokter spesialis.')
 
     else:
         stroke_diagnosis = 'Anda berkemungkinan tidak terkena stroke'

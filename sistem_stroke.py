@@ -26,6 +26,6 @@ st.write(
 )
 
 if st.button('🔍 Mulai Diagnosis'):
-    st.switch_page('pages/sistem_stroke.py')
+    st.switch_page('page/sistem_stroke.py')
 
 

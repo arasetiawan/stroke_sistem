@@ -17,13 +17,13 @@ col1, col2 = st.columns(2)
 with col1:
     gender = 0 if st.radio('Jenis kelamin?', ['Perempuan', 'Laki-laki']) == 'Perempuan' else 1
     age = st.number_input('Berapa umur anda?', min_value=0, max_value=120)
-    hypertension = 0 if st.radio('Punya Riwayat Hipertensi?', ['Tidak', 'Ya']) == 'Tidak' else 1
-    heart_disease = 0 if st.radio('Punya Riwayat Jantung?', ['Tidak', 'Ya']) == 'Tidak' else 1
+    hypertension = 0 if st.radio('Punya riwayat Hipertensi?', ['Tidak', 'Ya']) == 'Tidak' else 1
+    heart_disease = 0 if st.radio('Punya riwayat Jantung?', ['Tidak', 'Ya']) == 'Tidak' else 1
     ever_married = 0 if st.radio('Apakah anda pernah menikah?', ['Tidak', 'Ya']) == 'Tidak' else 1
 
 with col2:
     work_type = st.radio('Pilih tipe pekerjaan:', ['Pemerintahan', 'Anak-anak', 'Swasta', 'Wiraswasta'])
-    Residence_type =  0 if st.radio('pilih tipe tempat tinggal', ['Pedesaan', 'Perkotaan']) == 'Pedesaan' else 1
+    Residence_type =  0 if st.radio('Pilih tipe tempat tinggal', ['Pedesaan', 'Perkotaan']) == 'Pedesaan' else 1
     avg_glucose_level = st.number_input('Berapa kadar glukosa rata-rata anda?', min_value=0.0, format="%.2f")
     bmi = st.number_input('Berapa berat badan anda?', min_value=0.0, format="%.2f")
     smoking_status = st.radio('Pilih status merokok:', ['Dahulu merokok', 'Tidak diketahui', 'Tidak pernah merokok', 'Merokok'])

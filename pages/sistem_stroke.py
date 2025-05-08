@@ -15,7 +15,7 @@ import streamlit as st
 col1, col2 = st.columns(2)
 
 with col1:
-    gender = 1 if st.radio('Jenis Kelamin?', ['Laki-laki', 'Perempuan']) == 'Laki-laki' else 0
+    gender = 0 if st.radio('Jenis Kelamin?', ['Perempuan', 'Laki-laki']) == 'Perempuan' else 1
     age = st.number_input('Berapa umur Anda?', min_value=0, max_value=120)
     hypertension = 1 if st.radio('Punya Riwayat Hipertensi?', ['Ya', 'Tidak']) == 'Ya' else 0
     heart_disease = 1 if st.radio('Punya Riwayat Jantung?', ['Ya', 'Tidak']) == 'Ya' else 0

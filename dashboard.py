@@ -17,8 +17,9 @@ st.write('- **Kehilangan memori** yang dapat menyebabkan masalah kognitif.')
 st.write('- **Kelumpuhan** pada bagian tubuh tertentu.')
 st.write('- **Risiko komplikasi kesehatan lain**, termasuk penyakit jantung.')
 
+st.write('## Diagnosis Stroke')
 st.write(
-    'sekarang kita bisa melihat diagnosis stroke dengan cepat klik tombol di bawah untuk memulai.'
+    'Sekarang kita bisa melakukan diagnosis stroke dengan cepat klik tombol di bawah untuk memulai.'
 )
 
 if st.button('🔍 Mulai Diagnosis'):

@@ -18,7 +18,7 @@ st.write('- **Kelumpuhan** pada bagian tubuh tertentu.')
 st.write('- **Risiko komplikasi kesehatan lain**, termasuk penyakit jantung.')
 
 # Menampilkan gambar ilustrasi tentang stroke (opsional)
-st.image("gambar.png", use_container_width=True)
+st.image("gambar.jpg", use_container_width=True)
 
 st.write(
     'sekarang kita bisa melihat diagnosis stroke dengan cepat klik tombol di bawah untuk memulai.'

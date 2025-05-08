@@ -1,6 +1,4 @@
 import streamlit as st
-import sistem_stroke
-
 
 # Judul aplikasi
 st.title('🧠 Sistem Prediksi Stroke')

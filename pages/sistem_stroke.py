@@ -26,7 +26,7 @@ with col2:
     Residence_type =  0 if st.radio('Pilih tipe tempat tinggal', ['Pedesaan', 'Perkotaan']) == 'Pedesaan' else 1
     avg_glucose_level = st.number_input('Berapa kadar glukosa rata-rata anda?', min_value=0.0, format="%.2f")
     bmi = st.number_input('Berapa berat badan anda?', min_value=0.0, format="%.2f")
-    smoking_status = st.radio('Pilih status merokok:', ['Dahulu merokok', 'Tidak diketahui', 'Tidak pernah merokok', 'Merokok'])
+    smoking_status = st.radio('Pilih status merokok:', ['Tidak diketahui', 'Dahulu merokok', 'Tidak pernah merokok', 'Merokok'])
 
 # Konversi ke nilai numerik menggunakan ternary operator
 work_type = (
@@ -37,8 +37,8 @@ work_type = (
 )
 # Konversi ke nilai numerik menggunakan ternary operator
 smoking_status = (
-    0 if smoking_status == 'Dahulu merokok' else 
-    1 if smoking_status == 'Tidak diketahui' else 
+    0 if smoking_status == 'Tidak diketahui' else 
+    1 if smoking_status == 'Dahulu merokok' else 
     2 if smoking_status == 'Tidak pernah merokok' else 
     3  # "Merokok"
 )
